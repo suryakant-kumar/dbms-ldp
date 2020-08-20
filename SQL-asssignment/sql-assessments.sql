@@ -21,7 +21,7 @@ values (1, 3, 100, null, 50),
        (5, 5, 100, 100, 100);
 
 -- soln:
-SELECT a.experience, 
+SELECT a.experience as exp,
 	   sum(
 		CASE WHEN (a.algo IS NULL OR a.algo = 100) AND 
 				  (a.sql IS NULL OR a.sql = 100) AND 
@@ -50,7 +50,7 @@ values (1, 2, null, null, null),
        (5, 2, 40, 100, 100);
        
 -- soln:       
-SELECT a.experience, 
+SELECT a.experience as exp,
 	   sum(
 		CASE WHEN (a.algo IS NULL OR a.algo = 100) AND 
 				  (a.sql IS NULL OR a.sql = 100) AND 
